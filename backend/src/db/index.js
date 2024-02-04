@@ -4,7 +4,7 @@ import { DB_NAME } from "../constant.js";
 
 //process 2
 dotenv.config({
-  path: "./env",
+  path: "./.env",
 });
 
 const dbUrl = process.env.MONGODB_URI;
@@ -13,8 +13,8 @@ const dbUrl = process.env.MONGODB_URI;
 const connectDB = async () => {
   try {
     const connectionIntance = await mongoose.connect(
-        //`${process.env.MONGODB_URI}/${DB_NAME}`
-        `mongodb+srv://tanisha:Tanisha%4087@cluster0.yxdhs78.mongodb.net`
+        `${process.env.MONGODB_URI}/${DB_NAME}`
+       // `mongodb+srv://tanisha:Tanisha%4087@cluster0.yxdhs78.mongodb.net`
         );
     console.log(
       `\n MongoDB connected !! DB HOST: ${connectionIntance.connection.host}`

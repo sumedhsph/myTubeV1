@@ -1,12 +1,12 @@
-import dotenv from "dotenv";
+//import dotenv from "dotenv";
 //import mongoose from "mongoose";
 //import { DB_NAME } from "./constant";
 import {app} from "./app.js"
 import connectDB from "./db/index.js";
 
-dotenv.config({
+/* dotenv.config({
   path: "./env",
-});
+}); */
 
 connectDB()
   .then(() => {
